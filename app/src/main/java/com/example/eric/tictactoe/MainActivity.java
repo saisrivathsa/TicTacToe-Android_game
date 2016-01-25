@@ -35,15 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public void resetClick(View v) {
         clear();
     }
-    public void announce(boolean endState, String player) {
-       if (endState == true)
-            player = player + " wins!";
-        else
-            player = "Draw!";
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, player, Toast.LENGTH_LONG);
-        toast.show();
-    }
+
     public void cellClick(View v) {
         if (moveCount%2==0){
             mark="X";
@@ -83,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+    public void announce(boolean endState, String player) {
+        if (endState == true)
+            player = player + " wins!";
+        else
+            player = "Draw!";
+        Context context = getApplicationContext();
+        Toast toast = Toast.makeText(context, player, Toast.LENGTH_LONG);
+        toast.show();
     }
     public void clear() {
 
